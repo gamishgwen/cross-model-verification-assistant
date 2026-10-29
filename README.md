@@ -10,6 +10,19 @@ This project also includes the original command-line verification prototype (`cr
 
 **Project status:** Working prototype. Model-based review does not guarantee factual correctness, and comprehensive accuracy benchmarking has not been completed.
 
+## CrossVerify AI — Application Preview
+
+### Dashboard
+![CrossVerify AI dashboard](screenshots/05-crossverify-dashboard.png)
+
+### Refined Answer
+![Offline demo answer](screenshots/06-refined-answer.png)
+
+### Model Review & Refinement
+![Refinement details](screenshots/07-refinement-details.png)
+
+These screenshots demonstrate the Streamlit application interface and its offline demo experience. Live mode requires separate OpenAI and Anthropic API credentials.
+
 ## Why this matters for enterprise AI
 
 Any single model can hallucinate, misread intent, or make an unauthorized
