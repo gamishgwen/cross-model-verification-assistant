@@ -108,11 +108,31 @@ The application then saved the approved output locally.
 
 ## Setup
 
+Requires Python 3.11+ and API keys for OpenAI and Anthropic.
+
+### 1. Create a virtual environment and install dependencies
+
 ```bash
-pip install -r requirements.txt --break-system-packages
-cp .env.example .env
-# open .env and paste in your real Anthropic + OpenAI API keys
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
 ```
+
+### 2. Configure API keys
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and enter your OpenAI and Anthropic API keys. Never commit this file to GitHub.
+
+### 3. Run the application
+
+```bash
+python cross_verify.py "Draft a professional email requesting an update on a fictional purchase order."
+```
+
+Approved outputs are saved locally to `approved_outputs/`. API usage may incur charges.
 
 Get keys from:
 - Anthropic: https://console.anthropic.com/settings/keys
