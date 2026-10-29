@@ -76,21 +76,63 @@ By default: OpenAI drafts, Claude verifies. Swap `drafter`/`verifier` in
 
 ## Screenshots
 
-_Add your own screenshots to a `screenshots/` folder in this project, then
-reference them here, e.g.:_
+## Demonstration Results
 
-```
-![Terminal run showing draft, verification, and approval](screenshots/terminal-run.png)
-![Approved output file](screenshots/approved-output.png)
-```
+This prototype was tested using fictional business scenarios to demonstrate both approval and rejection workflows.
+
+### Test 1 — Rejection and human-review fallback
+
+OpenAI generated an email containing unresolved sender information. Claude rejected the draft and provided feedback. After one revision, the issues remained, so the application flagged the output for human review without saving it as an approved response.
+
+![Initial rejection](screenshots/01-verification-rejected.png)
+
+![Human-review fallback](screenshots/02-human-review-fallback.png)
+
+### Test 2 — Successful verification and approval
+
+OpenAI generated a professional vendor follow-up email using complete fictional sender and recipient details. Claude independently evaluated it against the instructions and returned an approval verdict.
+
+The application then saved the approved output locally.
+
+![Successful approval](screenshots/03-verification-approved.png)
+
+![Approved output](screenshots/04-approved-output.png)
+
+### Prototype limitations
+
+- Verification is performed by an AI model and does not guarantee factual accuracy.
+- The application allows one automatic revision before flagging an unsuccessful result for human review.
+- Approved outputs are saved to local text files; no external emails or business actions are executed.
+- Human-review fallback is flagged in the terminal; a human approval interface has not been implemented.
+- All examples use fictional business data.
 
 ## Setup
 
+Requires Python 3.11+ and API keys for OpenAI and Anthropic.
+
+### 1. Create a virtual environment and install dependencies
+
 ```bash
-pip install -r requirements.txt --break-system-packages
-cp .env.example .env
-# open .env and paste in your real Anthropic + OpenAI API keys
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install -r requirements.txt
 ```
+
+### 2. Configure API keys
+
+```bash
+cp .env.example .env
+```
+
+Open `.env` and enter your OpenAI and Anthropic API keys. Never commit this file to GitHub.
+
+### 3. Run the application
+
+```bash
+python cross_verify.py "Draft a professional email requesting an update on a fictional purchase order."
+```
+
+Approved outputs are saved locally to `approved_outputs/`. API usage may incur charges.
 
 Get keys from:
 - Anthropic: https://console.anthropic.com/settings/keys
