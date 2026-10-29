@@ -1,11 +1,10 @@
 # Cross-Model Verification Assistant
 
-A working prototype of a guardrail pattern used in production enterprise AI
-systems: give a command, one AI model drafts the response/action, a second
-independent model verifies it, and only approved output gets implemented.
-Built to answer a real request from my manager — "connect Claude and OpenAI
-so one verifies the other before anything gets implemented" — by prototyping
-it myself first.
+A Python-based prototype exploring cross-model AI verification for enterprise workflows.
+
+The solution uses OpenAI to generate an initial response and Claude to independently review it before approval. It explores structured verification, rejection and revision workflows, and human-review fallback.
+
+I developed this prototype to explore how multiple AI models can be orchestrated to improve output reliability and introduce safeguards before AI-generated responses are used in business processes.
 
 ## Why this matters for enterprise AI
 
