@@ -2,3 +2,6 @@
 __pycache__/
 *.pyc
 approved_outputs/
+
+# macOS Finder files
+.DS_Store
