@@ -5,3 +5,53 @@ approved_outputs/
 
 # macOS Finder files
 .DS_Store
+Name: streamlit
+Version: 1.66.1
+Summary: A faster way to build and share data apps
+Home-page: https://streamlit.io
+Author: 
+Author-email: Snowflake Inc <hello@streamlit.io>
+License-Expression: Apache-2.0
+Location: /Users/apple/Documents/GitHub/cross-model-verification-assistant/.venv/lib/python3.13/site-packages
+Requires: altair, anyio, click, itsdangerous, numpy, packaging, pandas, pillow, protobuf, pyarrow, pydeck, python-multipart, requests, starlette, typing-extensions, uvicorn, websockets
+Required-by: 
+---
+Name: openai
+Version: 3.41.0
+Summary: The official Python library for the openai API
+Home-page: https://github.com/openai/openai-python
+Author: 
+Author-email: OpenAI <support@openai.com>
+License-Expression: Apache-2.0
+Location: /Users/apple/Documents/GitHub/cross-model-verification-assistant/.venv/lib/python3.13/site-packages
+Requires: anyio, httpx2, jiter, pydantic, sniffio, typing-extensions
+Required-by: 
+---
+Name: anthropic
+Version: 2.3.0
+Summary: The official Python library for the anthropic API
+Home-page: https://github.com/anthropics/anthropic-sdk-python
+Author: 
+Author-email: Anthropic <support@anthropic.com>
+License: Apache-2.0
+Location: /Users/apple/Documents/GitHub/cross-model-verification-assistant/.venv/lib/python3.13/site-packages
+Requires: anyio, docstring-parser, httpx2, jiter, opentelemetry-api, pydantic, sniffio, typing-extensions
+Required-by: 
+---
+Name: httpx2
+Version: 2.16.0
+Summary: The next generation HTTP client.
+Home-page: https://github.com/pydantic/httpx2
+Author: 
+Author-email: Tom Christie <tom@tomchristie.com>
+License-Expression: BSD-3-Clause
+Location: /Users/apple/Documents/GitHub/cross-model-verification-assistant/.venv/lib/python3.13/site-packages
+Requires: anyio, httpcore2, idna, truststore
+Required-by: anthropic, openai
+
+# Local development backups
+app_backup.py
+app_backup.py.py
+app_before_format_fix.py
+appbackup.py
+answer_engine_backup.py
