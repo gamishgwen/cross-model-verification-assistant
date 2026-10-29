@@ -1,10 +1,14 @@
-# Cross-Model Verification Assistant
+# CrossVerify AI — Multi-Model Answer Refinement
 
-A Python-based prototype exploring cross-model AI verification for enterprise workflows.
+CrossVerify AI is a Python-based application that explores how multiple AI models can collaborate to produce more complete, reliable, and useful answers.
 
-The solution uses OpenAI to generate an initial response and Claude to independently review it before approval. It explores structured verification, rejection and revision workflows, and human-review fallback.
+The application uses OpenAI to generate an initial response, Claude to independently review it, and OpenAI to refine the answer using the review feedback.
 
-I developed this prototype to explore how multiple AI models can be orchestrated to improve output reliability and introduce safeguards before AI-generated responses are used in business processes.
+A Streamlit web interface allows users to ask questions, view refined responses, and inspect the model review process.
+
+This project also includes the original command-line verification prototype (`cross_verify.py`), which demonstrates approval, revision, and human-review fallback.
+
+**Project status:** Working prototype. Model-based review does not guarantee factual correctness, and comprehensive accuracy benchmarking has not been completed.
 
 ## Why this matters for enterprise AI
 
